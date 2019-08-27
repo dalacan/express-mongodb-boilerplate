@@ -21,7 +21,7 @@ jobs:
     - docker images
     - echo "Publishing to docker registry"
     - docker tag  $DOCKER_USERNAME/express-mongodb-boilerplate $DOCKER_USERNAME/express-mongodb-boilerplate
-    - docker push $DOCKER_USERNAME/express-boilerplate
+    - docker push $DOCKER_USERNAME/express-mongodb-boilerplate
 env:
   global:
   - secure: BOXfC4k7sxAK6c+I4jjksX4mNtyNz4dsVfQmRAhYluZnbYllOuj6P27C6FcH1mSWNS90fP9ojJ9V3QS0/USjSmPXEXg6dDXR3y2yHe8WjoAEGZMtCdapnCatypew8m5XDh9OHcKj+xuAvFwvQd1MtFPxF3zdZYhlgetmgT3C8EfXS5YDOCAvordWOYTdjjxVGgVaHl/8RsD/nZWm/Lc4Sj7UjCLuehWczuqiEdKPwUQXzrRhtd+yuiwu6lVwtcKUk7x8RFjcD6RcTGQdzTmWlvyuJjyKEQ7kLJ1lCWZNE0tN1VhQO7u/+bW5FttQDbZEpcvpvmCmjBwj/2i/6wLUzkemnfDPn5czlfv9FHicEPoge7ADDThd8se5LdcfFWj7YUJj++FwmAlXuhHJ3OcAd94G4mOH5zzf5ecWUP5RpFg1R61dxAL39nR0LZm7wY7F4Wb2yFUOtet2yBNDUhaZtfJdUkNGNHGV/dU12iC0dHnzB4yd7ii46a8XHmvzVFahoJ+2cRZx9dR1a+AkZiESQCTTMD5RzLcOT1xmKbXZW+lHlhqVOXKcSuvCn7XrW1mirGb2Be+Du3u3kfDsr9Ynq/B3ZhXsNrJ8vQo96AZ4uOjuUsQlGf9QJ1tuJwDYteQ5Z9fEwVDDJJl6oTdWurmGxnwWvvQ8ngRT1QbiNzlbzgQ=
