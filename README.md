@@ -1,7 +1,7 @@
-# Express.JS Boilerplate
+# Express.js Boilerplate with MongoDB
 [![Build Status](https://travis-ci.org/dalacan/express-boilerplate.svg?branch=master)](https://travis-ci.org/dalacan/express-boilerplate)
 
-A simple Express API boilerplate with a TravisCI and docker build pipeline.
+A simple Express API with mongodb as the database boilerplate with a TravisCI and docker CI build pipeline.
 
 ## API
 
