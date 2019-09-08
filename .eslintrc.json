@@ -18,9 +18,6 @@
         },
         "ecmaVersion": 2018
     },
-    "plugins": [
-        "react"
-    ],
     "rules": {
     }
 }

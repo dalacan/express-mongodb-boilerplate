@@ -1,25 +1,24 @@
-var http = require('http');
-var express = require('express');
-var mongoose = require("mongoose");
-var config = require('./configs/config');
+const http = require('http');
+const express = require('express');
+const mongoose = require('mongoose');
+const config = require('./configs/config');
+const indexRouter = require('./routes/index');
+const statusRouter = require('./routes/status');
+const userRouter = require('./routes/user');
 
-var indexRouter = require('./routes/index');
-var statusRouter = require('./routes/status');
-var userRouter = require('./routes/user');
-
-var app = express();
+const app = express();
 
 mongoose
   .connect(config.db, {
     useNewUrlParser: true,
     useCreateIndex: true,
-    useFindAndModify: false
+    useFindAndModify: false,
   })
-  .then(() =>
-    console.log('Connected to MongoDB ' + config.db)
-  )
-  .catch(err => {
-    console.log("Failed to connect to MongoDB...", err);
+  // eslint-disable-next-line no-console
+  .then(() => console.log(`Connected to MongoDB ${config.db}`))
+  .catch((err) => {
+    // eslint-disable-next-line no-console
+    console.log('Failed to connect to MongoDB...', err);
     process.exit();
   });
 
@@ -33,10 +32,11 @@ app.use('/user', userRouter);
 //     res.send('hello worlds');
 // });
 
-var server = http.createServer(app);
-var port = 3000;
+const server = http.createServer(app);
+const port = 3000;
 server.listen(port);
 
-console.debug('Server listening on port ' + port);
+// eslint-disable-next-line no-console
+console.debug(`Server listening on port ${port}`);
 
 module.exports = app; // for testing
